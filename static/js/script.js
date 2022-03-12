@@ -10,7 +10,7 @@ $("#reg_form").on("submit",function(){
    var udata = {"name":values[0]["value"],"password":values[1]["value"],"email":values[2]["value"],}
   
    $.ajax({
-      url:"http://localhost:5000/create_user",
+      url:"https://aiclhtml.herokuapp.com/create_user",
       type:"POST",
       data:JSON.stringify(udata),
       dataType:"JSON",
@@ -32,7 +32,7 @@ $("#login_form").on("submit",function(){
    var values = $(this).serializeArray();
    var udata = {"name":values[0]["value"],"password":values[1]["value"]}
    $.ajax({
-      url:"http://localhost:5000/login_user",
+      url:"https://aiclhtml.herokuapp.com/login_user",
       type:"POST",
       data:JSON.stringify(udata),
       dataType:"JSON",
